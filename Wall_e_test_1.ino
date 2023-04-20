@@ -1,18 +1,18 @@
-// Include the Arduino library
+
 #include <Arduino.h>
 
-// Define the pins for controlling the motors
+// motor pin defs 
 const int motorPin1 = 2;
 const int motorPin2 = 3;
 const int motorPin3 = 4;
 const int motorPin4 = 5;
 
-// Define the delay times for each movement
+// delay times 
 const int forwardTime = 2000;
 const int turnTime = 500;
 
 void setup() {
-  // Set the motor pins as output
+  // outputs 
   pinMode(motorPin1, OUTPUT);
   pinMode(motorPin2, OUTPUT);
   pinMode(motorPin3, OUTPUT);
@@ -20,14 +20,14 @@ void setup() {
 }
 
 void loop() {
-  // Move forward for 2 seconds
+  // forward for 2 seconds
   digitalWrite(motorPin1, HIGH);
   digitalWrite(motorPin2, LOW);
   digitalWrite(motorPin3, HIGH);
   digitalWrite(motorPin4, LOW);
   delay(forwardTime);
 
-  // Turn right 90 degrees
+  // right 90 degrees
   digitalWrite(motorPin1, LOW);
   digitalWrite(motorPin2, HIGH);
   digitalWrite(motorPin3, HIGH);
